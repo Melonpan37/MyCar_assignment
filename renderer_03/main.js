@@ -842,6 +842,7 @@ Renderer.setupAndStart = function () {
   Renderer.shadowMapShader = new uniformShader(Renderer.gl);
 
   //initialize textures
+  /*
   Renderer.textures = {
     Dtex : Renderer.createTexture(Renderer.gl, "https://localhost:8080/Dtexture.png"),
     facade1 : Renderer.createTexture(Renderer.gl, "https://localhost:8080/facade1.jpg"),
@@ -856,7 +857,22 @@ Renderer.setupAndStart = function () {
     depthTexture : Renderer.createDepthTexture(Renderer.gl), //EDIT : added depth texture
     colorTexture : Renderer.createColorTexture(Renderer.gl), //EDIT : added color texture
   };
+  */
 
+  Renderer.textures = {
+    facade1 : Renderer.createTexture(Renderer.gl, "../common/textures/facade1.jpg"),
+    facade2 : Renderer.createTexture(Renderer.gl, "../common/textures/facade2.jpg"),
+    facade3 : Renderer.createTexture(Renderer.gl, "../common/textures/facade3.jpg"),
+    roof : Renderer.createTexture(Renderer.gl, "../common/textures/roof.jpg"),
+    grass : Renderer.createTexture(Renderer.gl, "../common/textures/grass_tile.png"),
+    street : Renderer.createTexture(Renderer.gl, "../common/textures/street4.png"),
+    car : Renderer.createTexture(Renderer.gl, "../common/textures/car_texture.png"),
+    lamp : Renderer.createTexture(Renderer.gl, "../common/textures/lamp_texture.png"),
+    headlight : Renderer.createHeadlightTexture(Renderer.gl, "../common/textures/headlight.png"),
+    depthTexture : Renderer.createDepthTexture(Renderer.gl), //EDIT : added depth texture
+    colorTexture : Renderer.createColorTexture(Renderer.gl), //EDIT : added color texture
+  };
+	
   //EDIT : initialize framebuffers 
   depthFrameBuffer = Renderer.gl.createFramebuffer();
   Renderer.createDepthFrameBuffer(Renderer.gl);
