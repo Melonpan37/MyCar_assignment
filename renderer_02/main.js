@@ -215,6 +215,7 @@ Renderer.drawObject = function (gl, obj, shader, fillColor) {
 
   gl.drawElements(gl.TRIANGLES, obj.triangleIndices.length, gl.UNSIGNED_SHORT, 0);
 
+  if(!obj.hasOwnProperty("indexBufferEdges")) return;
   //draw edges
   gl.disable(gl.POLYGON_OFFSET_FILL);
   gl.uniform4fv(this.shader.uColorLocation, new Float32Array([0.0, 0.0, 0.0, 1.0]));
