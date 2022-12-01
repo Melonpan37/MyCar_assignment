@@ -136,6 +136,8 @@ Renderer.drawObject = function (gl, obj, fillColor, lineColor) {
   //to draw edges
   gl.disable(gl.POLYGON_OFFSET_FILL);
   
+  if(!obj.hasOwnProperty("indexBufferEdges")) return;
+	
   //setup color uniform for edges 
   gl.uniform4fv(this.uniformShader.uColorLocation, lineColor);
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, obj.indexBufferEdges);
