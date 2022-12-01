@@ -571,6 +571,7 @@ Renderer.setupAndStart = function () {
   Renderer.canvas.addEventListener('keyup',on_keyup,false);
 
   //EDIT : init textures
+  /*
   Renderer.textures = {
     Dtex : Renderer.createTexture(Renderer.gl, "https://localhost:8080/Dtexture.png"),
     facade1 : Renderer.createTexture(Renderer.gl, "https://localhost:8080/facade1.jpg"),
@@ -582,6 +583,18 @@ Renderer.setupAndStart = function () {
     car : Renderer.createTexture(Renderer.gl, "https://localhost:8080/car_texture.png"),
     lamp : Renderer.createTexture(Renderer.gl, "https://localhost:8080/lamp_texture.png"),
     headlight : Renderer.createHeadlightTexture(Renderer.gl, "https://localhost:8080/headlight.png"),
+  };
+  */
+  Renderer.textures = {
+    facade1 : Renderer.createTexture(Renderer.gl, "../common/textures/facade1.jpg"),
+    facade2 : Renderer.createTexture(Renderer.gl, "../common/textures/facade2.jpg"),
+    facade3 : Renderer.createTexture(Renderer.gl, "../common/textures/facade3.jpg"),
+    roof : Renderer.createTexture(Renderer.gl, "../common/textures/roof.jpg"),
+    grass : Renderer.createTexture(Renderer.gl, "../common/textures/grass_tile.png"),
+    street : Renderer.createTexture(Renderer.gl, "../common/textures/street4.png"),
+    car : Renderer.createTexture(Renderer.gl, "../common/textures/car_texture.png"),
+    lamp : Renderer.createTexture(Renderer.gl, "../common/textures/lamp_texture.png"),
+    headlight : Renderer.createHeadlightTexture(Renderer.gl, "../common/textures/headlight.png"),
   };
 
   Renderer.Display();
